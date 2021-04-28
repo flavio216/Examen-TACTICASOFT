@@ -1,0 +1,11 @@
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaNegocio\bin\Debug\CapaNegocio.dll.config
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaNegocio\bin\Debug\CapaDatos.dll.config
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaNegocio\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaNegocio\obj\Debug\CapaNegocio.pdb
