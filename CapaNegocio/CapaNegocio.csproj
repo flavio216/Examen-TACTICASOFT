@@ -45,6 +45,7 @@
     <Compile Include="Clientes.cs" />
     <Compile Include="GestorClientes\GestorClientes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validaciones.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">

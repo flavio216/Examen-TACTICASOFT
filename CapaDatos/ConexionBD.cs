@@ -56,7 +56,13 @@ namespace CapaDatos
             conexion.Close();
             conexion.Dispose();
         }
-
+        public void actualizarBD(string sql)
+        {
+            Conectar();
+            comando.CommandText = sql;
+            comando.ExecuteNonQuery();
+            Desconectar();
+        }
 
         public DataTable consultarTabla(string tabla)
         {

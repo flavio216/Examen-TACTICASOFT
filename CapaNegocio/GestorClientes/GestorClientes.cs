@@ -1,12 +1,7 @@
 ﻿using CapaDatos;
-using CapaNegocio;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CapaNegocio
@@ -53,6 +48,39 @@ namespace CapaNegocio
 
             return resultado;
         }
+        public bool EditarCliente(Clientes c)
+        {
+            bool resultado = false;
+            ConexionBD bd = new ConexionBD();
+            try
+            {
+                string sql = "update clientes set cliente = @cliente, telefono = @telefono, correo = @correo where id = @id ";
+                SqlCommand cmd = new SqlCommand(sql, bd.conexion);
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", c.Id);
+                cmd.Parameters.AddWithValue("@cliente", c.Cliente);
+                cmd.Parameters.AddWithValue("@telefono", c.Telefono);
+                cmd.Parameters.AddWithValue("@correo", c.Correo);
+
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = sql;
+
+                bd.Conectar();
+                cmd.ExecuteNonQuery();
+                resultado = true;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No se ha podido actualizar ", " Aviso");
+            }
+            finally
+            {
+                bd.Desconectar();
+            }
+            return resultado;
+        }
         public void Buscar(string sql, DataGridView dtgv)
         {
             DataTable dt = new DataTable();
@@ -82,6 +110,7 @@ namespace CapaNegocio
             }
 
         }
+
     }
 }
 
