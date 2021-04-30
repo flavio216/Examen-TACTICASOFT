@@ -33,6 +33,7 @@ namespace Examen_TACTICASOFT
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -47,17 +48,16 @@ namespace Examen_TACTICASOFT
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblCantidadRegistros = new System.Windows.Forms.Label();
             this.dtgCliente = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.chkEliminar = new System.Windows.Forms.CheckBox();
-            this.lblCantidad = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblApellidoBuscar = new System.Windows.Forms.Label();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.errorCliente = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblCantidadRegistros = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -101,6 +101,25 @@ namespace Examen_TACTICASOFT
             this.tabPage2.Size = new System.Drawing.Size(808, 437);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Cargar cliente";
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Imprint MT Shadow", 13.5F, System.Drawing.FontStyle.Bold);
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
+            this.btnModificar.Location = new System.Drawing.Point(298, 283);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(113, 93);
+            this.btnModificar.TabIndex = 91;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // txtTelefono
             // 
@@ -286,10 +305,10 @@ namespace Examen_TACTICASOFT
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.lblCantidadRegistros);
             this.tabPage1.Controls.Add(this.dtgCliente);
             this.tabPage1.Controls.Add(this.chkEliminar);
-            this.tabPage1.Controls.Add(this.lblCantidad);
             this.tabPage1.Controls.Add(this.btnEliminar);
             this.tabPage1.Controls.Add(this.btnBuscar);
             this.tabPage1.Controls.Add(this.txtBuscar);
@@ -302,6 +321,33 @@ namespace Examen_TACTICASOFT
             this.tabPage1.Size = new System.Drawing.Size(808, 437);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Buscar cliente";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(69, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Nombre";
+            // 
+            // lblCantidadRegistros
+            // 
+            this.lblCantidadRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCantidadRegistros.AutoSize = true;
+            this.lblCantidadRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.lblCantidadRegistros.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.lblCantidadRegistros.Location = new System.Drawing.Point(382, 112);
+            this.lblCantidadRegistros.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCantidadRegistros.Name = "lblCantidadRegistros";
+            this.lblCantidadRegistros.Size = new System.Drawing.Size(179, 17);
+            this.lblCantidadRegistros.TabIndex = 18;
+            this.lblCantidadRegistros.Text = "Cantidad de Registros: ";
             // 
             // dtgCliente
             // 
@@ -351,18 +397,6 @@ namespace Examen_TACTICASOFT
             this.chkEliminar.UseVisualStyleBackColor = true;
             this.chkEliminar.CheckedChanged += new System.EventHandler(this.chkEliminar_CheckedChanged);
             // 
-            // lblCantidad
-            // 
-            this.lblCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.lblCantidad.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblCantidad.Location = new System.Drawing.Point(358, 90);
-            this.lblCantidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(0, 17);
-            this.lblCantidad.TabIndex = 14;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -379,7 +413,7 @@ namespace Examen_TACTICASOFT
             // btnBuscar
             // 
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(282, 39);
+            this.btnBuscar.Location = new System.Drawing.Point(338, 31);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(38, 32);
@@ -389,7 +423,7 @@ namespace Examen_TACTICASOFT
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(84, 46);
+            this.txtBuscar.Location = new System.Drawing.Point(140, 38);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(194, 20);
@@ -407,41 +441,9 @@ namespace Examen_TACTICASOFT
             this.lblApellidoBuscar.Size = new System.Drawing.Size(0, 17);
             this.lblApellidoBuscar.TabIndex = 8;
             // 
-            // btnModificar
-            // 
-            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Imprint MT Shadow", 13.5F, System.Drawing.FontStyle.Bold);
-            this.btnModificar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.Location = new System.Drawing.Point(298, 283);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(113, 93);
-            this.btnModificar.TabIndex = 91;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
             // errorCliente
             // 
             this.errorCliente.ContainerControl = this;
-            // 
-            // lblCantidadRegistros
-            // 
-            this.lblCantidadRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCantidadRegistros.AutoSize = true;
-            this.lblCantidadRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.lblCantidadRegistros.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblCantidadRegistros.Location = new System.Drawing.Point(382, 112);
-            this.lblCantidadRegistros.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCantidadRegistros.Name = "lblCantidadRegistros";
-            this.lblCantidadRegistros.Size = new System.Drawing.Size(179, 17);
-            this.lblCantidadRegistros.TabIndex = 18;
-            this.lblCantidadRegistros.Text = "Cantidad de Registros: ";
             // 
             // frmCliente
             // 
@@ -483,7 +485,6 @@ namespace Examen_TACTICASOFT
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.CheckBox chkEliminar;
-        private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
@@ -493,5 +494,6 @@ namespace Examen_TACTICASOFT
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.ErrorProvider errorCliente;
         private System.Windows.Forms.Label lblCantidadRegistros;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -23,3 +23,4 @@ C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Debug\
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Debug\Examen TACTICASOFT.exe
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Debug\Examen TACTICASOFT.pdb
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Debug\Examen_TACTICASOFT.frmCliente.resources
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Debug\Examen_TACTICASOFT.frmProductos.resources

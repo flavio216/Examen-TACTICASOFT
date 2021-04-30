@@ -87,7 +87,6 @@ namespace Examen_TACTICASOFT
            
             RellenarDTGVClientes();
         }
-        string sqldefault = "select * from clientes";
         private void Mostrar(string sql, DataGridView dtgv)
         {
             ConexionBD bd = new ConexionBD();
@@ -203,7 +202,8 @@ namespace Examen_TACTICASOFT
                     {
                         MessageBox.Show("El cliente se ha modificado con exito.", "Modificar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         tabControl1.SelectedIndex = 1;
-                        Limpiar();
+                        RellenarDTGVClientes();
+                        
 
                     }
                     else
@@ -268,6 +268,11 @@ namespace Examen_TACTICASOFT
             txtTelefono.MaxLength = 14;
             txtCorreo.MaxLength = 20;
             txtBuscar.MaxLength = 10;
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
 
         }
     }
