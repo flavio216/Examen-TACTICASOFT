@@ -29,6 +29,8 @@ namespace Examen_TACTICASOFT
             string sql = "SELECT * from clientes WHERE cliente LIKE '" + txtBuscar.Text + "%' or id LIKE '"+txtBuscar.Text +"%'";
             gestor.Buscar(sql, dtgCliente);
         }
+      
+
         private void RellenarDTGVClientes()
         {
             try

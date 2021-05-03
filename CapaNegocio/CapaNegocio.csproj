@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestorCaja\GestorCaja.cs" />
+    <Compile Include="ModelCaja\Caja.cs" />
+    <Compile Include="ModelCaja\DetalleVentas.cs" />
+    <Compile Include="ModelCaja\Ventas.cs" />
     <Compile Include="ModelClientes\Clientes.cs" />
     <Compile Include="GestorClientes\GestorClientes.cs" />
     <Compile Include="GestorProductos\GestorProductos.cs" />

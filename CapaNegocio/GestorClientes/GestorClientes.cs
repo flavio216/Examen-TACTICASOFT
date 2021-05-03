@@ -81,15 +81,7 @@ namespace CapaNegocio
             }
             return resultado;
         }
-        public void Buscar(string sql, DataGridView dtgv)
-        {
-            DataTable dt = new DataTable();
-            ConexionBD gestor = new ConexionBD();
-            dt = gestor.buscarTabla(sql);
-            dtgv.DataSource = dt;
-            //lblCantidadRegistros.Text = "Cantidad de Registros: " + dtgv.Rows.Count;
-            //lblCantidadRegistrosBaja.Text = "Cantidad de Registros: " + dtgv.Rows.Count;
-        }
+        
         public DataTable consultarTablaClientes()
         {
             DataTable dt = new DataTable();
@@ -110,7 +102,14 @@ namespace CapaNegocio
             }
 
         }
+        public void Buscar(string sql, DataGridView dtgv)
+        {
+            DataTable dt = new DataTable();
+            ConexionBD gestor = new ConexionBD();
+            dt = gestor.buscarTabla(sql);
+            dtgv.DataSource = dt;
 
+        }
     }
 }
 

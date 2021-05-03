@@ -71,6 +71,18 @@
     <Compile Include="Clientes\frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion\frmCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\frmCaja.Designer.cs">
+      <DependentUpon>frmCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\frmFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\frmFacturacion.Designer.cs">
+      <DependentUpon>frmFacturacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Productos\frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +93,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Clientes\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\frmCaja.resx">
+      <DependentUpon>frmCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\frmFacturacion.resx">
+      <DependentUpon>frmFacturacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
