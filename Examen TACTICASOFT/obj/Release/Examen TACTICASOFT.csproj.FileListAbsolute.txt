@@ -1,0 +1,91 @@
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\SqlServerTypes\x64\msvcr120.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\SqlServerTypes\x86\msvcr120.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Examen TACTICASOFT.exe.config
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Examen TACTICASOFT.exe
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Examen TACTICASOFT.pdb
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\CapaDatos.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\CapaNegocio.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Microsoft.ReportViewer.Design.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Microsoft.SqlServer.Types.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\System.Configuration.ConfigurationManager.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\System.Security.AccessControl.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\System.Security.Permissions.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\System.Security.Principal.Windows.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\EnvDTE.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\stdole.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\Microsoft.MSXML.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\CapaDatos.pdb
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\CapaDatos.dll.config
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\CapaNegocio.pdb
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\CapaNegocio.dll.config
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\System.Configuration.ConfigurationManager.xml
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\System.Security.AccessControl.xml
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\System.Security.Permissions.xml
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\System.Security.Principal.Windows.xml
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen TACTICASOFT.csprojAssemblyReference.cache
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.frmCliente.resources
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.Productos.frmSinStock.resources
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.Productos.frmConStock.resources
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.Facturacion.frmCaja.resources
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.Facturacion.frmFacturacion.resources
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.frmPrincipal.resources
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.frmProductos.resources
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.Properties.Resources.resources
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen TACTICASOFT.csproj.GenerateResource.cache
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\RdlCompile.cache
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\RdlCompile.compiled
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen TACTICASOFT.csproj.CoreCompileInputs.cache
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen TACTICASOFT.csproj.CopyComplete
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen TACTICASOFT.exe
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen TACTICASOFT.pdb
