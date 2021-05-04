@@ -14,9 +14,9 @@ namespace CapaNegocio.GestorCaja
     public class GestorCaja
     {
 
-        public void insertarVenta(Ventas v)
+        public bool insertarVenta(Ventas v)
         {
-           
+            bool resultado = false;
             ConexionBD conex = new ConexionBD();
 
             try
@@ -33,6 +33,9 @@ namespace CapaNegocio.GestorCaja
                 cmd.CommandText = sql;
                 conex.Conectar();
                 cmd.ExecuteNonQuery();
+                resultado = true;
+
+
 
             }
             catch (Exception ex)
@@ -46,7 +49,7 @@ namespace CapaNegocio.GestorCaja
             {
                 conex.Desconectar();
             }
-            
+            return resultado;
          
         }
         public bool InsertarDetalle(DetalleVentas dv)
@@ -89,6 +92,6 @@ namespace CapaNegocio.GestorCaja
 
             return resultado;
         }
-
+        
     }
 }

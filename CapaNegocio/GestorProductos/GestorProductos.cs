@@ -13,7 +13,7 @@ namespace CapaNegocio
 {
     public class GestorProductos
     {
-        public bool InsertarProducto(Productos p)
+        public bool InsertarProducto(Producto p)
         {
             bool resultado = false;
             ConexionBD bd = new ConexionBD();
@@ -52,14 +52,7 @@ namespace CapaNegocio
 
             return resultado;
         }
-        public void Buscar(string sql, DataGridView dtgv)
-        {
-            DataTable dt = new DataTable();
-            ConexionBD bd = new ConexionBD();
-            dt = bd.buscarTabla(sql);
-            dtgv.DataSource = dt;
-
-        }
+    
         public DataTable ConsultarProductos()
         {
             DataTable dt = new DataTable();
@@ -100,7 +93,7 @@ namespace CapaNegocio
             }
 
         }
-        public bool EditarProducto(Productos p)
+        public bool EditarProducto(Producto p)
         {
             bool resultado = false;
             ConexionBD bd = new ConexionBD();
@@ -125,7 +118,7 @@ namespace CapaNegocio
             catch (Exception ex)
             {
 
-                MessageBox.Show("No se ha podido actualizar ", " Aviso");
+                MessageBox.Show("No se ha podido actualizar ", " Aviso"+ex);
             }
             finally
             {

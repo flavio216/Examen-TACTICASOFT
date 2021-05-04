@@ -34,6 +34,7 @@ namespace Examen_TACTICASOFT.Facturacion
             }
             catch (Exception)
             {
+                Limpiar();
                 txtCantidad.Text = "0";
 
             }
@@ -60,9 +61,36 @@ namespace Examen_TACTICASOFT.Facturacion
             }
 
         }
+        private bool validarCampos()
+        {
+            bool ok = true;
 
+            if (txtID.Text == "")
+            {
+                MessageBox.Show("Debe ingresar un Codigo...");
+                txtID.Focus();
+                ok = false;
+                errorCliente.SetError(txtID, "Ingrese un Codigo");
+                return false;
+            }
+            if (txtCantidad.Text == "")
+            {
+                MessageBox.Show("Debe ingresar una cantidad...");
+                txtCantidad.Focus();
+                ok = false;
+                errorCliente.SetError(txtCantidad, "Ingrese Cantidad");
+                return false;
+            }
+          
+
+            return true;
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (validarCampos())
+            {
+
+           
             int codigo = int.Parse(txtID.Text);
             string nombre = txtNombre.Text;
             float precio = float.Parse(txtPrecio.Text);
@@ -85,6 +113,7 @@ namespace Examen_TACTICASOFT.Facturacion
                 Caja c = new Caja(codigo, nombre, precio, categoria, cantidad);
                 Listado.Add(c);
             }
+            
             var list = new BindingList<Caja>(Listado);
             dtgvCaja.DataSource = list;
             dtgvCaja.Columns[0].HeaderText = "Codigo";
@@ -99,7 +128,9 @@ namespace Examen_TACTICASOFT.Facturacion
             {
                 total += producto.Cantidad * producto.Precio;
             }
+            
             lblSubTotal.Text = total.ToString();
+            }
         }
         private void Limpiar()
         {
@@ -156,6 +187,32 @@ namespace Examen_TACTICASOFT.Facturacion
             }
 
             return dt;
+        }
+
+        private void btnBorrarLista_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea eliminar la lista?, esta acción no se puede deshacer.", "Precaución", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                dtgvCaja.Rows.Clear();
+                Limpiar();
+
+            }
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

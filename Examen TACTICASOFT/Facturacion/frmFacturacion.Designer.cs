@@ -228,6 +228,7 @@ namespace Examen_TACTICASOFT.Facturacion
             this.txtBuscarDni.Size = new System.Drawing.Size(206, 20);
             this.txtBuscarDni.TabIndex = 26;
             this.txtBuscarDni.TextChanged += new System.EventHandler(this.txtBuscarDni_TextChanged);
+            this.txtBuscarDni.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarDni_KeyPress);
             // 
             // label3
             // 

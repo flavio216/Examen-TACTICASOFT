@@ -32,6 +32,9 @@ namespace Examen_TACTICASOFT
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.dtgProductos = new System.Windows.Forms.DataGridView();
+            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCantidadRegistros = new System.Windows.Forms.Label();
             this.chkEliminar = new System.Windows.Forms.CheckBox();
@@ -39,14 +42,18 @@ namespace Examen_TACTICASOFT
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dtgProductoSinStock = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnImprimir2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCantidadRegistrosSinStock = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.txtBuscarSinStock = new System.Windows.Forms.TextBox();
             this.lblApellidoBuscar = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnBaja = new System.Windows.Forms.Button();
+            this.btnAlta = new System.Windows.Forms.Button();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.btnModificar = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -60,28 +67,23 @@ namespace Examen_TACTICASOFT
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnVolver = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.dtgProductos = new System.Windows.Forms.DataGridView();
-            this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.errorCliente = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnBaja = new System.Windows.Forms.Button();
-            this.btnAlta = new System.Windows.Forms.Button();
-            this.dtgProductoSinStock = new System.Windows.Forms.DataGridView();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProductoSinStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgProductoSinStock)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.tabPage3.Controls.Add(this.btnImprimir);
             this.tabPage3.Controls.Add(this.dtgProductos);
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Controls.Add(this.lblCantidadRegistros);
@@ -95,7 +97,53 @@ namespace Examen_TACTICASOFT
             this.tabPage3.Size = new System.Drawing.Size(808, 437);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Productos";
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImprimir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnImprimir.Location = new System.Drawing.Point(603, 33);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(125, 47);
+            this.btnImprimir.TabIndex = 66;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // dtgProductos
+            // 
+            this.dtgProductos.AllowUserToAddRows = false;
+            this.dtgProductos.AllowUserToDeleteRows = false;
+            this.dtgProductos.AllowUserToOrderColumns = true;
+            this.dtgProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgProductos.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Eliminar});
+            this.dtgProductos.GridColor = System.Drawing.SystemColors.ButtonShadow;
+            this.dtgProductos.Location = new System.Drawing.Point(83, 138);
+            this.dtgProductos.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgProductos.MultiSelect = false;
+            this.dtgProductos.Name = "dtgProductos";
+            this.dtgProductos.ReadOnly = true;
+            this.dtgProductos.RowHeadersWidth = 51;
+            this.dtgProductos.RowTemplate.Height = 24;
+            this.dtgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgProductos.Size = new System.Drawing.Size(645, 245);
+            this.dtgProductos.TabIndex = 65;
+            this.dtgProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellContentClick);
+            this.dtgProductos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellContentDoubleClick);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.MinimumWidth = 6;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Width = 125;
             // 
             // label2
             // 
@@ -103,7 +151,7 @@ namespace Examen_TACTICASOFT
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(47, 49);
+            this.label2.Location = new System.Drawing.Point(90, 49);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 16);
@@ -116,7 +164,7 @@ namespace Examen_TACTICASOFT
             this.lblCantidadRegistros.AutoSize = true;
             this.lblCantidadRegistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.lblCantidadRegistros.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblCantidadRegistros.Location = new System.Drawing.Point(360, 119);
+            this.lblCantidadRegistros.Location = new System.Drawing.Point(476, 119);
             this.lblCantidadRegistros.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidadRegistros.Name = "lblCantidadRegistros";
             this.lblCantidadRegistros.Size = new System.Drawing.Size(179, 17);
@@ -128,7 +176,7 @@ namespace Examen_TACTICASOFT
             this.chkEliminar.AutoSize = true;
             this.chkEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.chkEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.chkEliminar.Location = new System.Drawing.Point(50, 96);
+            this.chkEliminar.Location = new System.Drawing.Point(93, 96);
             this.chkEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.chkEliminar.Name = "chkEliminar";
             this.chkEliminar.Size = new System.Drawing.Size(85, 21);
@@ -141,10 +189,10 @@ namespace Examen_TACTICASOFT
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(436, 49);
+            this.button1.Location = new System.Drawing.Point(448, 31);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 27);
+            this.button1.Size = new System.Drawing.Size(125, 47);
             this.button1.TabIndex = 60;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = true;
@@ -153,7 +201,7 @@ namespace Examen_TACTICASOFT
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(316, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(359, 38);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 32);
@@ -163,7 +211,7 @@ namespace Examen_TACTICASOFT
             // 
             // txtBuscar
             // 
-            this.txtBuscar.Location = new System.Drawing.Point(118, 45);
+            this.txtBuscar.Location = new System.Drawing.Point(161, 45);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(194, 20);
@@ -174,9 +222,9 @@ namespace Examen_TACTICASOFT
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.tabPage1.Controls.Add(this.dtgProductoSinStock);
+            this.tabPage1.Controls.Add(this.btnImprimir2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.lblCantidadRegistrosSinStock);
-            this.tabPage1.Controls.Add(this.btnEliminar);
             this.tabPage1.Controls.Add(this.btnBuscar);
             this.tabPage1.Controls.Add(this.txtBuscarSinStock);
             this.tabPage1.Controls.Add(this.lblApellidoBuscar);
@@ -188,6 +236,53 @@ namespace Examen_TACTICASOFT
             this.tabPage1.Size = new System.Drawing.Size(808, 437);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Productos Sin Stock";
+
+            // 
+            // dtgProductoSinStock
+            // 
+            this.dtgProductoSinStock.AllowUserToAddRows = false;
+            this.dtgProductoSinStock.AllowUserToDeleteRows = false;
+            this.dtgProductoSinStock.AllowUserToOrderColumns = true;
+            this.dtgProductoSinStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgProductoSinStock.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dtgProductoSinStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgProductoSinStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewCheckBoxColumn1});
+            this.dtgProductoSinStock.GridColor = System.Drawing.SystemColors.ButtonShadow;
+            this.dtgProductoSinStock.Location = new System.Drawing.Point(45, 147);
+            this.dtgProductoSinStock.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgProductoSinStock.MultiSelect = false;
+            this.dtgProductoSinStock.Name = "dtgProductoSinStock";
+            this.dtgProductoSinStock.ReadOnly = true;
+            this.dtgProductoSinStock.RowHeadersWidth = 51;
+            this.dtgProductoSinStock.RowTemplate.Height = 24;
+            this.dtgProductoSinStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgProductoSinStock.Size = new System.Drawing.Size(645, 245);
+            this.dtgProductoSinStock.TabIndex = 68;
+            this.dtgProductoSinStock.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductoSinStock_CellContentDoubleClick);
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Eliminar";
+            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Width = 125;
+            // 
+            // btnImprimir2
+            // 
+            this.btnImprimir2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImprimir2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnImprimir2.Location = new System.Drawing.Point(550, 21);
+            this.btnImprimir2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImprimir2.Name = "btnImprimir2";
+            this.btnImprimir2.Size = new System.Drawing.Size(104, 48);
+            this.btnImprimir2.TabIndex = 67;
+            this.btnImprimir2.Text = "Imprimir";
+            this.btnImprimir2.UseVisualStyleBackColor = true;
+            this.btnImprimir2.Click += new System.EventHandler(this.btnImprimir2_Click);
             // 
             // label1
             // 
@@ -214,18 +309,6 @@ namespace Examen_TACTICASOFT
             this.lblCantidadRegistrosSinStock.Size = new System.Drawing.Size(179, 17);
             this.lblCantidadRegistrosSinStock.TabIndex = 18;
             this.lblCantidadRegistrosSinStock.Text = "Cantidad de Registros: ";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEliminar.Location = new System.Drawing.Point(458, 42);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(56, 27);
-            this.btnEliminar.TabIndex = 12;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnBuscar
             // 
@@ -288,7 +371,6 @@ namespace Examen_TACTICASOFT
             this.tabPage2.Controls.Add(this.btnCancelar);
             this.tabPage2.Controls.Add(this.btnSalir);
             this.tabPage2.Controls.Add(this.btnNuevo);
-            this.tabPage2.Controls.Add(this.btnVolver);
             this.tabPage2.Controls.Add(this.btnCargar);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
@@ -297,6 +379,44 @@ namespace Examen_TACTICASOFT
             this.tabPage2.Size = new System.Drawing.Size(808, 437);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "ABM Productos";
+            // 
+            // btnBaja
+            // 
+            this.btnBaja.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnBaja.FlatAppearance.BorderSize = 0;
+            this.btnBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaja.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Bold);
+            this.btnBaja.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnBaja.Image = ((System.Drawing.Image)(resources.GetObject("btnBaja.Image")));
+            this.btnBaja.Location = new System.Drawing.Point(543, 142);
+            this.btnBaja.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBaja.Name = "btnBaja";
+            this.btnBaja.Size = new System.Drawing.Size(121, 107);
+            this.btnBaja.TabIndex = 94;
+            this.btnBaja.Text = "Dar Baja";
+            this.btnBaja.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnBaja.UseVisualStyleBackColor = true;
+            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
+            // 
+            // btnAlta
+            // 
+            this.btnAlta.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAlta.FlatAppearance.BorderSize = 0;
+            this.btnAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlta.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAlta.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAlta.Image = ((System.Drawing.Image)(resources.GetObject("btnAlta.Image")));
+            this.btnAlta.Location = new System.Drawing.Point(417, 151);
+            this.btnAlta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAlta.Name = "btnAlta";
+            this.btnAlta.Size = new System.Drawing.Size(115, 98);
+            this.btnAlta.TabIndex = 93;
+            this.btnAlta.Text = "Dar Alta";
+            this.btnAlta.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAlta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAlta.UseVisualStyleBackColor = true;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
             // lblCategoria
             // 
@@ -362,6 +482,7 @@ namespace Examen_TACTICASOFT
             // txtCodigo
             // 
             this.txtCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(540, 60);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Name = "txtCodigo";
@@ -427,7 +548,7 @@ namespace Examen_TACTICASOFT
             this.btnCancelar.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(435, 325);
+            this.btnCancelar.Location = new System.Drawing.Point(435, 329);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(116, 89);
@@ -446,7 +567,7 @@ namespace Examen_TACTICASOFT
             this.btnSalir.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Bold);
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(555, 330);
+            this.btnSalir.Location = new System.Drawing.Point(555, 325);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(109, 89);
@@ -475,22 +596,6 @@ namespace Examen_TACTICASOFT
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // btnVolver
-            // 
-            this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Bold);
-            this.btnVolver.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnVolver.Image = ((System.Drawing.Image)(resources.GetObject("btnVolver.Image")));
-            this.btnVolver.Location = new System.Drawing.Point(18, 5);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(52, 49);
-            this.btnVolver.TabIndex = 62;
-            this.btnVolver.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnVolver.UseVisualStyleBackColor = true;
-            // 
             // btnCargar
             // 
             this.btnCargar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -510,105 +615,9 @@ namespace Examen_TACTICASOFT
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // dtgProductos
-            // 
-            this.dtgProductos.AllowUserToAddRows = false;
-            this.dtgProductos.AllowUserToDeleteRows = false;
-            this.dtgProductos.AllowUserToOrderColumns = true;
-            this.dtgProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgProductos.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Eliminar});
-            this.dtgProductos.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dtgProductos.Location = new System.Drawing.Point(40, 138);
-            this.dtgProductos.Margin = new System.Windows.Forms.Padding(2);
-            this.dtgProductos.MultiSelect = false;
-            this.dtgProductos.Name = "dtgProductos";
-            this.dtgProductos.ReadOnly = true;
-            this.dtgProductos.RowHeadersWidth = 51;
-            this.dtgProductos.RowTemplate.Height = 24;
-            this.dtgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgProductos.Size = new System.Drawing.Size(550, 245);
-            this.dtgProductos.TabIndex = 65;
-            this.dtgProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellContentDoubleClick_1);
-            this.dtgProductos.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductos_CellContentDoubleClick_1);
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.MinimumWidth = 6;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Width = 125;
-            // 
             // errorCliente
             // 
             this.errorCliente.ContainerControl = this;
-            // 
-            // btnBaja
-            // 
-            this.btnBaja.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnBaja.FlatAppearance.BorderSize = 0;
-            this.btnBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBaja.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Bold);
-            this.btnBaja.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnBaja.Image = ((System.Drawing.Image)(resources.GetObject("btnBaja.Image")));
-            this.btnBaja.Location = new System.Drawing.Point(543, 142);
-            this.btnBaja.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBaja.Name = "btnBaja";
-            this.btnBaja.Size = new System.Drawing.Size(121, 107);
-            this.btnBaja.TabIndex = 94;
-            this.btnBaja.Text = "Dar Baja";
-            this.btnBaja.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnBaja.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnBaja.UseVisualStyleBackColor = true;
-            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
-            // 
-            // btnAlta
-            // 
-            this.btnAlta.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAlta.FlatAppearance.BorderSize = 0;
-            this.btnAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlta.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Bold);
-            this.btnAlta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAlta.Image = ((System.Drawing.Image)(resources.GetObject("btnAlta.Image")));
-            this.btnAlta.Location = new System.Drawing.Point(417, 151);
-            this.btnAlta.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAlta.Name = "btnAlta";
-            this.btnAlta.Size = new System.Drawing.Size(115, 98);
-            this.btnAlta.TabIndex = 93;
-            this.btnAlta.Text = "Dar Alta";
-            this.btnAlta.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAlta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAlta.UseVisualStyleBackColor = true;
-            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
-            // 
-            // dtgProductoSinStock
-            // 
-            this.dtgProductoSinStock.AllowUserToAddRows = false;
-            this.dtgProductoSinStock.AllowUserToDeleteRows = false;
-            this.dtgProductoSinStock.AllowUserToOrderColumns = true;
-            this.dtgProductoSinStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgProductoSinStock.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtgProductoSinStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgProductoSinStock.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dtgProductoSinStock.Location = new System.Drawing.Point(72, 131);
-            this.dtgProductoSinStock.Margin = new System.Windows.Forms.Padding(2);
-            this.dtgProductoSinStock.MultiSelect = false;
-            this.dtgProductoSinStock.Name = "dtgProductoSinStock";
-            this.dtgProductoSinStock.ReadOnly = true;
-            this.dtgProductoSinStock.RowHeadersWidth = 51;
-            this.dtgProductoSinStock.RowTemplate.Height = 24;
-            this.dtgProductoSinStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgProductoSinStock.Size = new System.Drawing.Size(550, 245);
-            this.dtgProductoSinStock.TabIndex = 66;
-            this.dtgProductoSinStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProductoSinStock_CellContentClick);
-            this.dtgProductoSinStock.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dtgProductoSinStock_MouseDoubleClick);
             // 
             // frmProductos
             // 
@@ -621,16 +630,16 @@ namespace Examen_TACTICASOFT
             this.Load += new System.EventHandler(this.frmProductos_Load);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProductoSinStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgProductoSinStock)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -641,7 +650,6 @@ namespace Examen_TACTICASOFT
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCantidadRegistrosSinStock;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox btnBuscar;
         private System.Windows.Forms.TextBox txtBuscarSinStock;
         private System.Windows.Forms.Label lblApellidoBuscar;
@@ -659,7 +667,6 @@ namespace Examen_TACTICASOFT
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCantidadRegistros;
@@ -671,8 +678,11 @@ namespace Examen_TACTICASOFT
         private System.Windows.Forms.DataGridView dtgProductos;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
         private System.Windows.Forms.ErrorProvider errorCliente;
-        private System.Windows.Forms.DataGridView dtgProductoSinStock;
         private System.Windows.Forms.Button btnBaja;
         private System.Windows.Forms.Button btnAlta;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnImprimir2;
+        private System.Windows.Forms.DataGridView dtgProductoSinStock;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
     }
 }

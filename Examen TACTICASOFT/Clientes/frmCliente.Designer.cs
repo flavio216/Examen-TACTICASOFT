@@ -45,7 +45,6 @@ namespace Examen_TACTICASOFT
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnVolver = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
@@ -92,7 +91,6 @@ namespace Examen_TACTICASOFT
             this.tabPage2.Controls.Add(this.btnCancelar);
             this.tabPage2.Controls.Add(this.btnSalir);
             this.tabPage2.Controls.Add(this.btnNuevo);
-            this.tabPage2.Controls.Add(this.btnVolver);
             this.tabPage2.Controls.Add(this.btnCargar);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
@@ -110,7 +108,7 @@ namespace Examen_TACTICASOFT
             this.btnModificar.Font = new System.Drawing.Font("Imprint MT Shadow", 13.5F, System.Drawing.FontStyle.Bold);
             this.btnModificar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.Location = new System.Drawing.Point(298, 283);
+            this.btnModificar.Location = new System.Drawing.Point(351, 285);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(113, 93);
@@ -192,7 +190,7 @@ namespace Examen_TACTICASOFT
             // txtNroCliente
             // 
             this.txtNroCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtNroCliente.Location = new System.Drawing.Point(540, 60);
+            this.txtNroCliente.Location = new System.Drawing.Point(609, 60);
             this.txtNroCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtNroCliente.Name = "txtNroCliente";
             this.txtNroCliente.Size = new System.Drawing.Size(82, 20);
@@ -204,7 +202,7 @@ namespace Examen_TACTICASOFT
             this.lblCodigoText.AutoSize = true;
             this.lblCodigoText.Font = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Bold);
             this.lblCodigoText.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCodigoText.Location = new System.Drawing.Point(460, 60);
+            this.lblCodigoText.Location = new System.Drawing.Point(529, 60);
             this.lblCodigoText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodigoText.Name = "lblCodigoText";
             this.lblCodigoText.Size = new System.Drawing.Size(84, 16);
@@ -219,7 +217,7 @@ namespace Examen_TACTICASOFT
             this.btnCancelar.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Bold);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(428, 283);
+            this.btnCancelar.Location = new System.Drawing.Point(481, 285);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(116, 89);
@@ -238,7 +236,7 @@ namespace Examen_TACTICASOFT
             this.btnSalir.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Bold);
             this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(548, 283);
+            this.btnSalir.Location = new System.Drawing.Point(601, 285);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(109, 89);
@@ -256,7 +254,7 @@ namespace Examen_TACTICASOFT
             this.btnNuevo.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Bold);
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(30, 283);
+            this.btnNuevo.Location = new System.Drawing.Point(83, 285);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(120, 89);
@@ -267,22 +265,6 @@ namespace Examen_TACTICASOFT
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // btnVolver
-            // 
-            this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Bold);
-            this.btnVolver.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnVolver.Image = ((System.Drawing.Image)(resources.GetObject("btnVolver.Image")));
-            this.btnVolver.Location = new System.Drawing.Point(18, 5);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(52, 49);
-            this.btnVolver.TabIndex = 62;
-            this.btnVolver.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnVolver.UseVisualStyleBackColor = true;
-            // 
             // btnCargar
             // 
             this.btnCargar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -291,7 +273,7 @@ namespace Examen_TACTICASOFT
             this.btnCargar.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Bold);
             this.btnCargar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCargar.Image = ((System.Drawing.Image)(resources.GetObject("btnCargar.Image")));
-            this.btnCargar.Location = new System.Drawing.Point(167, 283);
+            this.btnCargar.Location = new System.Drawing.Point(220, 285);
             this.btnCargar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(111, 89);
@@ -479,7 +461,6 @@ namespace Examen_TACTICASOFT
         private System.Windows.Forms.TextBox txtNroCliente;
         private System.Windows.Forms.Label lblCodigoText;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnCargar;

@@ -1,4 +1,5 @@
 ﻿using Examen_TACTICASOFT.Facturacion;
+using Examen_TACTICASOFT.Productos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Examen_TACTICASOFT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCaja());
+            Application.Run(new frmPrincipal());
         }
     }
 }

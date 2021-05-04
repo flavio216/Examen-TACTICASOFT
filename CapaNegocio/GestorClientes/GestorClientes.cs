@@ -73,7 +73,7 @@ namespace CapaNegocio
             catch (Exception ex)
             {
 
-                MessageBox.Show("No se ha podido actualizar ", " Aviso");
+                MessageBox.Show("No se ha podido actualizar ", " Aviso"+ex);
             }
             finally
             {
@@ -102,14 +102,7 @@ namespace CapaNegocio
             }
 
         }
-        public void Buscar(string sql, DataGridView dtgv)
-        {
-            DataTable dt = new DataTable();
-            ConexionBD gestor = new ConexionBD();
-            dt = gestor.buscarTabla(sql);
-            dtgv.DataSource = dt;
-
-        }
+      
     }
 }
 

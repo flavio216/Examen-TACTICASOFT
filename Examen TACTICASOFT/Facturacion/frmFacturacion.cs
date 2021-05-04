@@ -1,4 +1,5 @@
 ﻿using CapaDatos;
+using CapaNegocio;
 using CapaNegocio.GestorCaja;
 using CapaNegocio.ModelCaja;
 using System;
@@ -67,7 +68,7 @@ namespace Examen_TACTICASOFT.Facturacion
 
             Ventas v = new Ventas(0, dni, fecha, importeTotal);
             GestorCaja gestor = new GestorCaja();
-            int id =  gestor.insertarVenta(v);
+            /*int id =  gestor.insertarVenta(v);
             foreach (DataGridViewRow row in dgvCarrito.Rows)
             {
                 if (!(row.Cells[0].Value == null))
@@ -82,10 +83,7 @@ namespace Examen_TACTICASOFT.Facturacion
             }
 
             MessageBox.Show("El ID de la factura es : " + id, "AVISO");
-           // frmReporteFacturacion frmr = new frmReporteFacturacion(idFactura);
-           // frmr.ShowDialog();
-            //this.Close();
-
+            */
 
         }
         public void Calculos(DataGridView dgtv)
@@ -108,5 +106,9 @@ namespace Examen_TACTICASOFT.Facturacion
 
         }
 
+        private void txtBuscarDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumeros(e);
+        }
     }
 }

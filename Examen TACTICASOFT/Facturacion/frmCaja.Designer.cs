@@ -29,36 +29,40 @@ namespace Examen_TACTICASOFT.Facturacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCaja));
             this.lblSubTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.lblPrecioText = new System.Windows.Forms.Label();
             this.btnFacturar = new System.Windows.Forms.Button();
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnBorrarLista = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.PictureBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
-            this.lblCantidad = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.lblId_Text = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dtgvCaja = new System.Windows.Forms.DataGridView();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.lbl = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.errorCliente = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnLimpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCaja)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSubTotal
             // 
             this.lblSubTotal.AutoSize = true;
             this.lblSubTotal.Font = new System.Drawing.Font("Century Gothic", 16.25F);
+            this.lblSubTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblSubTotal.Location = new System.Drawing.Point(83, 404);
             this.lblSubTotal.Name = "lblSubTotal";
             this.lblSubTotal.Size = new System.Drawing.Size(124, 25);
@@ -69,6 +73,7 @@ namespace Examen_TACTICASOFT.Facturacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.25F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(15, 404);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 25);
@@ -82,16 +87,6 @@ namespace Examen_TACTICASOFT.Facturacion
             this.txtPrecio.ReadOnly = true;
             this.txtPrecio.Size = new System.Drawing.Size(54, 20);
             this.txtPrecio.TabIndex = 46;
-            // 
-            // lblPrecioText
-            // 
-            this.lblPrecioText.AutoSize = true;
-            this.lblPrecioText.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecioText.Location = new System.Drawing.Point(53, 101);
-            this.lblPrecioText.Name = "lblPrecioText";
-            this.lblPrecioText.Size = new System.Drawing.Size(60, 20);
-            this.lblPrecioText.TabIndex = 45;
-            this.lblPrecioText.Text = "Precio:";
             // 
             // btnFacturar
             // 
@@ -124,6 +119,7 @@ namespace Examen_TACTICASOFT.Facturacion
             this.btnBorrarLista.TabIndex = 42;
             this.btnBorrarLista.Text = "Borrar Lista";
             this.btnBorrarLista.UseVisualStyleBackColor = true;
+            this.btnBorrarLista.Click += new System.EventHandler(this.btnBorrarLista_Click);
             // 
             // btnLimpiar
             // 
@@ -136,6 +132,7 @@ namespace Examen_TACTICASOFT.Facturacion
             this.btnLimpiar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnLimpiar.TabIndex = 41;
             this.btnLimpiar.TabStop = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnAgregar
             // 
@@ -156,16 +153,7 @@ namespace Examen_TACTICASOFT.Facturacion
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(54, 20);
             this.txtCantidad.TabIndex = 39;
-            // 
-            // lblCantidad
-            // 
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(31, 173);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(82, 20);
-            this.lblCantidad.TabIndex = 38;
-            this.lblCantidad.Text = "Cantidad:";
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // txtNombre
             // 
@@ -175,16 +163,6 @@ namespace Examen_TACTICASOFT.Facturacion
             this.txtNombre.Size = new System.Drawing.Size(228, 20);
             this.txtNombre.TabIndex = 37;
             // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(41, 61);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(72, 20);
-            this.lblNombre.TabIndex = 36;
-            this.lblNombre.Text = "Nombre:";
-            // 
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(119, 23);
@@ -192,16 +170,7 @@ namespace Examen_TACTICASOFT.Facturacion
             this.txtID.Size = new System.Drawing.Size(100, 20);
             this.txtID.TabIndex = 35;
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
-            // 
-            // lblId_Text
-            // 
-            this.lblId_Text.AutoSize = true;
-            this.lblId_Text.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId_Text.Location = new System.Drawing.Point(-2, 21);
-            this.lblId_Text.Name = "lblId_Text";
-            this.lblId_Text.Size = new System.Drawing.Size(121, 20);
-            this.lblId_Text.TabIndex = 34;
-            this.lblId_Text.Text = "Buscar Codigo:";
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // panel4
             // 
@@ -222,45 +191,106 @@ namespace Examen_TACTICASOFT.Facturacion
             this.dtgvCaja.Size = new System.Drawing.Size(643, 174);
             this.dtgvCaja.TabIndex = 7;
             // 
-            // txtCategoria
+            // lbl
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(119, 135);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(165, 20);
-            this.txtCategoria.TabIndex = 51;
+            this.lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Bold);
+            this.lbl.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl.Location = new System.Drawing.Point(2, 26);
+            this.lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(117, 16);
+            this.lbl.TabIndex = 80;
+            this.lbl.Text = "Buscar Codigo: ";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(32, 67);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 16);
+            this.label3.TabIndex = 81;
+            this.label3.Text = "Nombre: ";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(48, 107);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 16);
+            this.label4.TabIndex = 82;
+            this.label4.Text = "Precio:";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(32, 139);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.TabIndex = 83;
+            this.label5.Text = "Categoria:";
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 133);
+            this.label2.Font = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(32, 179);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 20);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Categoria:";
+            this.label2.Size = new System.Drawing.Size(80, 16);
+            this.label2.TabIndex = 84;
+            this.label2.Text = "Cantidad: ";
+            // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Location = new System.Drawing.Point(119, 137);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.ReadOnly = true;
+            this.txtCategoria.Size = new System.Drawing.Size(223, 20);
+            this.txtCategoria.TabIndex = 85;
+            // 
+            // errorCliente
+            // 
+            this.errorCliente.ContainerControl = this;
             // 
             // frmCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl);
             this.Controls.Add(this.lblSubTotal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.lblPrecioText);
             this.Controls.Add(this.btnFacturar);
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.btnBorrarLista);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.lblId_Text);
             this.Controls.Add(this.panel4);
             this.Name = "frmCaja";
             this.Text = "frmCaja";
@@ -268,6 +298,7 @@ namespace Examen_TACTICASOFT.Facturacion
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCaja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,21 +309,22 @@ namespace Examen_TACTICASOFT.Facturacion
         private System.Windows.Forms.Label lblSubTotal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.Label lblPrecioText;
         private System.Windows.Forms.Button btnFacturar;
         private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.Button btnBorrarLista;
         private System.Windows.Forms.PictureBox btnLimpiar;
         private System.Windows.Forms.PictureBox btnAgregar;
         private System.Windows.Forms.TextBox txtCantidad;
-        private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label lblId_Text;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dtgvCaja;
-        private System.Windows.Forms.TextBox txtCategoria;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCategoria;
+        private System.Windows.Forms.ErrorProvider errorCliente;
     }
 }

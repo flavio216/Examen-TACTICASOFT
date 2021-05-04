@@ -25,12 +25,20 @@ namespace Examen_TACTICASOFT
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            GestorClientes gestor = new GestorClientes();
+            //GestorClientes gestor = new GestorClientes();
             string sql = "SELECT * from clientes WHERE cliente LIKE '" + txtBuscar.Text + "%' or id LIKE '"+txtBuscar.Text +"%'";
-            gestor.Buscar(sql, dtgCliente);
+           Buscar(sql, dtgCliente);
         }
-      
 
+        public void Buscar(string sql, DataGridView dtgv)
+        {
+            DataTable dt = new DataTable();
+            ConexionBD gestor = new ConexionBD();
+            dt = gestor.buscarTabla(sql);
+            dtgv.DataSource = dt;
+            lblCantidadRegistros.Text = "Cantidad de registros: " + dtgCliente.Rows.Count.ToString();
+
+        }
         private void RellenarDTGVClientes()
         {
             try
@@ -178,7 +186,8 @@ namespace Examen_TACTICASOFT
             txtTelefono.Text = Convert.ToString(dtgCliente.CurrentRow.Cells[3].Value);
             txtCorreo.Text = Convert.ToString(dtgCliente.CurrentRow.Cells[4].Value);
             Habilitar(true);
-            tabControl1.SelectedIndex = 0;
+            tabControl1.SelectedIndex = 0;      
+            btnCargar.Enabled = false;
 
         }
 
