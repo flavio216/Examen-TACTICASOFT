@@ -27,8 +27,7 @@ namespace Examen_TACTICASOFT.Facturacion
             try
             {
                 codigo = int.Parse(txtID.Text);
-                string sql = "SELECT nombre, precio, categoria FROM Productos WHERE id = " + codigo + " AND Estado = 1";
-                ConexionBD gestor = new ConexionBD();
+                string sql = "SELECT nombre, precio, categoria FROM Productos WHERE id = " + codigo ;
                 buscarProducto(sql);
                 txtCantidad.Text = "1";
             }

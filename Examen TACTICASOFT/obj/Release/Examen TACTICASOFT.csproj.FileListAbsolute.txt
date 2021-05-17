@@ -75,8 +75,7 @@ C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Releas
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen TACTICASOFT.csprojAssemblyReference.cache
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.frmCliente.resources
-C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.Productos.frmSinStock.resources
-C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.Productos.frmConStock.resources
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.Facturacion.frmReporteVentas.resources
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.Facturacion.frmCaja.resources
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.Facturacion.frmFacturacion.resources
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\Examen TACTICASOFT\obj\Release\Examen_TACTICASOFT.frmPrincipal.resources

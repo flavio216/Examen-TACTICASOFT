@@ -83,6 +83,7 @@ namespace Examen_TACTICASOFT
                 {
                     MessageBox.Show("El cliente se ha cargado con exito.", "Insertar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     tabControl1.SelectedIndex = 1;
+                    lblCantidadRegistros.Text = "Cantidad de registros:" + dtgCliente.Rows.Count.ToString();
                     Limpiar();
 
                 }
@@ -157,7 +158,7 @@ namespace Examen_TACTICASOFT
 
             }
             RellenarDTGVClientes();
-
+            lblCantidadRegistros.Text = "Cantidad de registros:" + dtgCliente.Rows.Count.ToString();
 
         }
 
@@ -283,6 +284,11 @@ namespace Examen_TACTICASOFT
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
         {
 
         }

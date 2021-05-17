@@ -67,8 +67,8 @@ C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaDatos\bin\Release\pt\Micr
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaDatos\bin\Release\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaDatos\bin\Release\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaDatos\bin\Release\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaDatos\obj\Release\CapaDatos.csprojAssemblyReference.cache
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaDatos\obj\Release\CapaDatos.csproj.CoreCompileInputs.cache
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaDatos\obj\Release\CapaDatos.csproj.CopyComplete
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaDatos\obj\Release\CapaDatos.dll
 C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaDatos\obj\Release\CapaDatos.pdb
+C:\Users\FliaC\Documents\GitHub\Examen-TACTICASOFT\CapaDatos\obj\Release\CapaDatos.csprojAssemblyReference.cache

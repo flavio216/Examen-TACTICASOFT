@@ -43,7 +43,6 @@ namespace Examen_TACTICASOFT
             this.txtNroCliente = new System.Windows.Forms.TextBox();
             this.lblCodigoText = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -89,7 +88,6 @@ namespace Examen_TACTICASOFT
             this.tabPage2.Controls.Add(this.txtNroCliente);
             this.tabPage2.Controls.Add(this.lblCodigoText);
             this.tabPage2.Controls.Add(this.btnCancelar);
-            this.tabPage2.Controls.Add(this.btnSalir);
             this.tabPage2.Controls.Add(this.btnNuevo);
             this.tabPage2.Controls.Add(this.btnCargar);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -99,6 +97,7 @@ namespace Examen_TACTICASOFT
             this.tabPage2.Size = new System.Drawing.Size(808, 437);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Cargar cliente";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // btnModificar
             // 
@@ -227,24 +226,6 @@ namespace Examen_TACTICASOFT
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Bold);
-            this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(601, 285);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(109, 89);
-            this.btnSalir.TabIndex = 66;
-            this.btnSalir.Text = "Volver";
-            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // btnNuevo
             // 
@@ -460,7 +441,6 @@ namespace Examen_TACTICASOFT
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNroCliente;
         private System.Windows.Forms.Label lblCodigoText;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnCargar;

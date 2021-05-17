@@ -20,16 +20,34 @@ namespace Examen_TACTICASOFT.Facturacion
         {
             InitializeComponent();
             timer1.Enabled = true;
-            
+            txtNombre.Enabled = false;
+            txtTelefono.Enabled = false;
+            txtCorreo.Enabled = false;
             dgvCarrito.DataSource = dataSource;
             Calculos(dgvCarrito);
         }
 
         private void txtBuscarDni_TextChanged(object sender, EventArgs e)
         {
-            int dni = int.Parse(txtBuscarDni.Text);
-            string sql = " select cliente, telefono, correo from clientes";
-            buscarDNI(sql);
+            int dni;
+            try
+            {
+                dni = int.Parse(txtBuscarDni.Text);
+                string sql = " select cliente, telefono, correo from clientes where id =" + dni;
+                buscarDNI(sql);
+            }
+            catch (Exception)
+            {
+
+                Limpiar();
+            } 
+        }
+        private void Limpiar()
+        {
+            txtBuscarDni.Clear();
+            txtNombre.Clear();
+            txtCorreo.Clear();
+            txtTelefono.Clear();
         }
         private void buscarDNI(string sql)
         {
@@ -48,7 +66,9 @@ namespace Examen_TACTICASOFT.Facturacion
             catch (Exception)
             {
 
-                throw;
+                txtNombre.Clear();
+                txtCorreo.Clear();
+                txtTelefono.Clear();
             }
 
         }
@@ -68,14 +88,15 @@ namespace Examen_TACTICASOFT.Facturacion
 
             Ventas v = new Ventas(0, dni, fecha, importeTotal);
             GestorCaja gestor = new GestorCaja();
-            /*int id =  gestor.insertarVenta(v);
+            int id =  gestor.insertarVenta(v);
             foreach (DataGridViewRow row in dgvCarrito.Rows)
             {
                 if (!(row.Cells[0].Value == null))
                 {
                     int codigo = Convert.ToInt32(row.Cells[0].Value.ToString());
-                    int cantidad = Convert.ToInt32(row.Cells[4].Value.ToString());
                     float precio = float.Parse(row.Cells[2].Value.ToString());
+                    int cantidad = Convert.ToInt32(row.Cells[4].Value.ToString());
+                    
                     DetalleVentas dv = new DetalleVentas(0, id, codigo, precio, cantidad, precio * cantidad);
                     gestor.InsertarDetalle(dv);
                 }
@@ -83,7 +104,8 @@ namespace Examen_TACTICASOFT.Facturacion
             }
 
             MessageBox.Show("El ID de la factura es : " + id, "AVISO");
-            */
+            frmReporteVentas frmr = new frmReporteVentas(id);
+            frmr.ShowDialog();
 
         }
         public void Calculos(DataGridView dgtv)

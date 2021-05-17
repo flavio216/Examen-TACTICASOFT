@@ -20,13 +20,12 @@ namespace CapaNegocio
 
             try
             {
-                string consulta = "INSERT INTO Productos VALUES ( @nombre, @precio, @categoria, @estado)";
+                string consulta = "INSERT INTO Productos VALUES ( @nombre, @precio, @categoria)";
                 SqlCommand cmd = new SqlCommand(consulta, bd.conexion);
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@nombre", p.Nombre);
                 cmd.Parameters.AddWithValue("@precio", p.Precio);
                 cmd.Parameters.AddWithValue("@categoria", p.Categoria);
-                cmd.Parameters.AddWithValue("@estado", 1);
 
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -60,7 +59,7 @@ namespace CapaNegocio
             {
                 ConexionBD bd = new ConexionBD();
                 bd.Conectar();
-                bd.pComando.CommandText = " select id,nombre,precio,categoria from productos where estado = 1";
+                bd.pComando.CommandText = " select id,nombre,precio,categoria from productos ";
                 dt.Load(bd.pComando.ExecuteReader());
                 bd.Desconectar();
                 return dt;
@@ -73,26 +72,7 @@ namespace CapaNegocio
             }
 
         }
-        public DataTable ConsultarProductosSinStock()
-        {
-            DataTable dt = new DataTable();
-            try
-            {
-                ConexionBD bd = new ConexionBD();
-                bd.Conectar();
-                bd.pComando.CommandText = " select id,nombre,precio,categoria from productos where estado = 0";
-                dt.Load(bd.pComando.ExecuteReader());
-                bd.Desconectar();
-                return dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se podido establecer conexión con la base de datos, por favor contacte al administrador" +
-                    "del sistema." + ex);
-                return dt;
-            }
 
-        }
         public bool EditarProducto(Producto p)
         {
             bool resultado = false;

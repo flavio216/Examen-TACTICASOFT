@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "..\CapaDatos\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "..\CapaNegocio\CapaNegocio.csproj", "{C4FBAFD5-3915-49C8-AE00-C947B781A7E4}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupTecnosoft", "..\SetupTecnosoft\SetupTecnosoft.vdproj", "{B0D0ED78-5D65-4751-BE2C-D231C6768D77}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupTACTICASOFT", "..\SetupTACTICASOFT\SetupTACTICASOFT.vdproj", "{4EF328F5-4642-4442-B99B-EDEC4BED5CA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,8 +29,8 @@ Global
 		{C4FBAFD5-3915-49C8-AE00-C947B781A7E4}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{C4FBAFD5-3915-49C8-AE00-C947B781A7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4FBAFD5-3915-49C8-AE00-C947B781A7E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B0D0ED78-5D65-4751-BE2C-D231C6768D77}.Debug|Any CPU.ActiveCfg = Debug
-		{B0D0ED78-5D65-4751-BE2C-D231C6768D77}.Release|Any CPU.ActiveCfg = Release
+		{4EF328F5-4642-4442-B99B-EDEC4BED5CA0}.Debug|Any CPU.ActiveCfg = Release
+		{4EF328F5-4642-4442-B99B-EDEC4BED5CA0}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

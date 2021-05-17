@@ -89,13 +89,13 @@
     <Compile Include="Clientes\frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="CojuntoDeDatos.cs">
-      <DependentUpon>CojuntoDeDatos.xsd</DependentUpon>
+    <Compile Include="ConjuntoDeDatos.cs">
+      <DependentUpon>ConjuntoDeDatos.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CojuntoDeDatos.Designer.cs">
+    <Compile Include="ConjuntoDeDatos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CojuntoDeDatos.xsd</DependentUpon>
+      <DependentUpon>ConjuntoDeDatos.xsd</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\frmCaja.cs">
       <SubType>Form</SubType>
@@ -109,6 +109,12 @@
     <Compile Include="Facturacion\frmFacturacion.Designer.cs">
       <DependentUpon>frmFacturacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion\frmReporteVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\frmReporteVentas.Designer.cs">
+      <DependentUpon>frmReporteVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,30 +127,16 @@
     <Compile Include="Productos\frmProductos.Designer.cs">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Productos\frmSinStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Productos\frmSinStock.Designer.cs">
-      <DependentUpon>frmSinStock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Productos\frmConStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Productos\frmConStock.Designer.cs">
-      <DependentUpon>frmConStock.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Clientes\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Productos\frmSinStock.resx">
-      <DependentUpon>frmSinStock.cs</DependentUpon>
+    <EmbeddedResource Include="Facturacion\frmReporteVentas.resx">
+      <DependentUpon>frmReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Productos\frmConStock.resx">
-      <DependentUpon>frmConStock.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\infReporteVentas.rdlc" />
     <EmbeddedResource Include="Productos\infReporteProductosSinStock.rdlc" />
     <EmbeddedResource Include="Productos\infReporteProductosStock.rdlc" />
     <EmbeddedResource Include="Facturacion\frmCaja.resx">
@@ -168,16 +160,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="CojuntoDeDatos.xsc">
-      <DependentUpon>CojuntoDeDatos.xsd</DependentUpon>
+    <None Include="ConjuntoDeDatos.xsc">
+      <DependentUpon>ConjuntoDeDatos.xsd</DependentUpon>
     </None>
-    <None Include="CojuntoDeDatos.xsd">
+    <None Include="ConjuntoDeDatos.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CojuntoDeDatos.Designer.cs</LastGenOutput>
+      <LastGenOutput>ConjuntoDeDatos.Designer.cs</LastGenOutput>
     </None>
-    <None Include="CojuntoDeDatos.xss">
-      <DependentUpon>CojuntoDeDatos.xsd</DependentUpon>
+    <None Include="ConjuntoDeDatos.xss">
+      <DependentUpon>ConjuntoDeDatos.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

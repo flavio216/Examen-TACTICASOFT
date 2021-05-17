@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
 using CapaNegocio;
-using Examen_TACTICASOFT.Productos;
 
 namespace Examen_TACTICASOFT
 {
@@ -21,9 +20,8 @@ namespace Examen_TACTICASOFT
             InitializeComponent();
             MaximoCaracteres();          
             RellenarDTGVProductos();
-            RellenarDTGVProductosSinStock();
+            Habilitar(false);
             dtgProductos.Columns[0].Visible = false;
-            dtgProductoSinStock.Columns[0].Visible = false;
             txtCodigo.Enabled = false;
             
         }
@@ -39,7 +37,7 @@ namespace Examen_TACTICASOFT
                 float precio = float.Parse(txtPrecio.Text);
                 string categoria = txtCategoria.Text;
 
-                Producto p = new Producto(0,nombre,precio,categoria,1);
+                Producto p = new Producto(0,nombre,precio,categoria);
 
                 GestorProductos gestor = new GestorProductos();
 
@@ -47,7 +45,10 @@ namespace Examen_TACTICASOFT
                 if (resultado)
                 {
                     MessageBox.Show("El producto se cargo con exito", "Aviso",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
-                }
+                   tabControl1.SelectedIndex = 1;
+                   RellenarDTGVProductos();
+                   lblCantidadRegistros.Text = "Cantidad de registros:" + dtgProductos.Rows.Count.ToString();
+                    }
                 else
                 {
                     MessageBox.Show("No se ha podido insertar el producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -64,30 +65,13 @@ namespace Examen_TACTICASOFT
             dtgProductos.DataSource = dt;
             dtgProductos.ReadOnly = true;
         }
-        private void RellenarDTGVProductosSinStock()
-        {
-            DataTable dt = new DataTable();
-            GestorProductos gestor = new GestorProductos();
-            dt = gestor.ConsultarProductosSinStock();
-            dtgProductoSinStock.DataSource = dt;
-            dtgProductoSinStock.ReadOnly = true;
-        }
-        private void Mostrar(string sql, DataGridView dtgv)
-        {
-            ConexionBD bd = new ConexionBD();
-            DataTable dt = new DataTable();
-            dt = bd.buscarTabla(sql);
-            dtgv.DataSource = dt;
-        }
-
-
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
 
             try
             {
-                string sql = "SELECT id, nombre, precio,categoria from productos WHERE (nombre LIKE '" + txtBuscar.Text + "%' or id LIKE '" + txtBuscar.Text + "%') and estado = 1";
+                string sql = "SELECT id, nombre, precio,categoria from productos WHERE nombre LIKE '" + txtBuscar.Text + "%' or id LIKE '" + txtBuscar.Text + "%'";
                 Buscar(sql, dtgProductos);
             }
             catch (Exception)
@@ -134,25 +118,13 @@ namespace Examen_TACTICASOFT
 
             }
             RellenarDTGVProductos();
+            lblCantidadRegistros.Text = "Cantidad de registros:" + dtgProductos.Rows.Count.ToString();
         }
-
-       /* private void dtgProductos_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            txtCodigo.Text = Convert.ToString(dtgProductos.CurrentRow.Cells[1].Value);
-            txtNombre.Text = Convert.ToString(dtgProductos.CurrentRow.Cells[2].Value);
-            txtPrecio.Text = Convert.ToString(dtgProductos.CurrentRow.Cells[3].Value);
-            txtCategoria.Text = Convert.ToString(dtgProductos.CurrentRow.Cells[4].Value);
-            tabControl1.SelectedIndex = 1;
-            Habilitar(true);
-            btnModificar.Enabled = true;
-            btnBaja.Enabled = true;
-            btnAlta.Enabled = false;
-        }*/
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("¿Seguro que desea editar este cliente?", "Precaución", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+            if (MessageBox.Show("¿Seguro que desea editar este Producto?", "Precaución", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
                 if (validarCampos())
@@ -162,7 +134,7 @@ namespace Examen_TACTICASOFT
                     float precio = float.Parse(txtPrecio.Text);
                     string categoria = txtCategoria.Text;
 
-                    Producto p = new Producto(id, nombre, precio, categoria,1);
+                    Producto p = new Producto(id, nombre, precio, categoria);
 
                     GestorProductos gestor = new GestorProductos();
 
@@ -188,14 +160,6 @@ namespace Examen_TACTICASOFT
         {
             bool ok = true;
 
-            if (txtCodigo.Text == "")
-            {
-                MessageBox.Show("Debe ingresar un Codigo...");
-                txtNombre.Focus();
-                ok = false;
-                errorCliente.SetError(txtNombre, "Ingrese un Codigo");
-                return false;
-            }
             if (txtNombre.Text == "")
             {
                 MessageBox.Show("Debe ingresar un nombre...");
@@ -231,19 +195,7 @@ namespace Examen_TACTICASOFT
             txtPrecio.Text = "";
         }
 
-        private void txtBuscarSinStock_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                string sql = " select id,nombre,precio,categoria from productos where (nombre like '" + txtBuscarSinStock.Text + "%' or id like '" + txtBuscarSinStock.Text + "%') and estado = 0";
-                Buscar(sql, dtgProductoSinStock);
-            }
-            catch (Exception)
-            {
-                Limpiar() ;
-            }
-           
-        }
+       
         public void Buscar(string sql, DataGridView dtgv)
         {
             DataTable dt = new DataTable();
@@ -251,55 +203,11 @@ namespace Examen_TACTICASOFT
             dt = bd.buscarTabla(sql);
             dtgv.DataSource = dt;
             lblCantidadRegistros.Text = "Cantidad de registros:" +dtgProductos.Rows.Count.ToString();
-            lblCantidadRegistrosSinStock.Text = "Cantidad de registros:" + dtgProductoSinStock.Rows.Count.ToString();
+
 
         }
-   
-        private void btnAlta_Click(object sender, EventArgs e)
-        {
-            DialogResult Opcion;
-            Opcion = MessageBox.Show("Quiere dar de alta el producto?", "Producto", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-            if (Opcion == DialogResult.OK)
-            {
-                int Codigo;
-                string sql;
 
-                ConexionBD bd = new ConexionBD();
-                Codigo = Convert.ToInt32(dtgProductoSinStock.CurrentRow.Cells[1].Value);
-                sql = "UPDATE productos Set Estado = 1 WHERE Id=" + Codigo;
-                bd.actualizarBD(sql);
-               
-                tabControl1.SelectedIndex = 0;
-                RellenarDTGVProductos();
-                RellenarDTGVProductosSinStock();
-                lblCantidadRegistros.Text = "Cantidad de registros: " +dtgProductos.Rows.Count.ToString();
-                Limpiar();
-            }
-        }
-
-        private void btnBaja_Click(object sender, EventArgs e)
-        {
-            DialogResult Opcion;
-            Opcion = MessageBox.Show("Quiere dar de baja el producto?", "Producto", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-            if (Opcion == DialogResult.OK)
-            {
-                int Codigo;
-                string sql;
-
-                ConexionBD bd = new ConexionBD();
-                Codigo = Convert.ToInt32(dtgProductos.CurrentRow.Cells[1].Value);
-                sql = "UPDATE productos Set Estado = 0 WHERE Id=" + Codigo;
-                bd.actualizarBD(sql);
-
-                tabControl1.SelectedIndex = 2;
-                RellenarDTGVProductosSinStock();
-                RellenarDTGVProductos();
-                lblCantidadRegistros.Text = "Cantidad de registros: " + dtgProductoSinStock.Rows.Count.ToString();
-                Limpiar();
-            }
-        }
         private void MaximoCaracteres()
         {
             txtNombre.MaxLength = 20;
@@ -312,7 +220,7 @@ namespace Examen_TACTICASOFT
 
         private void frmProductos_Load(object sender, EventArgs e)
         {
-            lblCantidadRegistrosSinStock.Text = "Cantidad de Registros: " + dtgProductoSinStock.Rows.Count.ToString();
+            
             lblCantidadRegistros.Text = "Cantidad de Registros: " + dtgProductos.Rows.Count.ToString();
         }
 
@@ -342,8 +250,6 @@ namespace Examen_TACTICASOFT
             Habilitar(true);
             btnCargar.Enabled = true;
             Limpiar();
-            btnBaja.Enabled = false;
-            btnAlta.Enabled = false;
         }
 
       
@@ -356,42 +262,9 @@ namespace Examen_TACTICASOFT
             btnModificar.Enabled = false;
         }
 
-        private void btnImprimir_Click(object sender, EventArgs e)
-        {
-            frmConStock frm = new frmConStock();
-            frm.Show();
-        }
 
-        private void btnImprimir2_Click(object sender, EventArgs e)
-        {
-            frmSinStock frm = new frmSinStock();
-            frm.Show();
-        }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-
-            DialogResult opcion;
-            opcion = MessageBox.Show("Desea eliminar los registros?", "Productos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (opcion == DialogResult.Yes)
-            {
-                string codigo;
-                string sql;
-                ConexionBD bd = new ConexionBD();
-                foreach (DataGridViewRow row in dtgProductoSinStock.Rows)
-                {
-                    if (Convert.ToBoolean(row.Cells[0].Value))
-                    {
-                        codigo = Convert.ToString(row.Cells[1].Value);
-                        sql = "delete from productos where id =" + codigo;
-                        bd.actualizarBD(sql);
-                    }
-                }
-
-            }
-            RellenarDTGVProductos();
-        }
+     
 
         private void dtgProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -411,25 +284,9 @@ namespace Examen_TACTICASOFT
             tabControl1.SelectedIndex = 1;
             Habilitar(true);
             btnModificar.Enabled = true;
-            btnBaja.Enabled = true;
-            btnAlta.Enabled = false;
             txtCodigo.Enabled = false;
         }
 
-        private void dtgProductoSinStock_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtCodigo.Text = Convert.ToString(dtgProductoSinStock.CurrentRow.Cells[1].Value);
-            txtNombre.Text = Convert.ToString(dtgProductoSinStock.CurrentRow.Cells[2].Value);
-            txtPrecio.Text = Convert.ToString(dtgProductoSinStock.CurrentRow.Cells[3].Value);
-            txtCategoria.Text = Convert.ToString(dtgProductoSinStock.CurrentRow.Cells[4].Value);
-            tabControl1.SelectedIndex = 1;
-            Habilitar(true);
-            btnModificar.Enabled = true;
-            btnBaja.Enabled = false;
-            btnAlta.Enabled = true;
-            txtCodigo.Enabled = false;
-        }
-
-    
+      
     }
 }

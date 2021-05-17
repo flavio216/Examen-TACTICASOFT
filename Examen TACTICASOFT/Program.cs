@@ -1,5 +1,4 @@
 ﻿using Examen_TACTICASOFT.Facturacion;
-using Examen_TACTICASOFT.Productos;
 using System;
 using System.Collections.Generic;
 using System.Linq;

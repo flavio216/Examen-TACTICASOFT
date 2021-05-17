@@ -13,29 +13,33 @@ namespace CapaNegocio.GestorCaja
 {
     public class GestorCaja
     {
-
-        public bool insertarVenta(Ventas v)
+       
+        public int insertarVenta(Ventas v)
         {
-            bool resultado = false;
+            int MaxId = 0;
             ConexionBD conex = new ConexionBD();
 
             try
             {
-                string sql = " insert into ventas values (@idcliente, @fecha,@total)";
+                string sql = " insert into ventas values (@idcliente, @fecha,@total) select @@identity";
                 SqlCommand cmd = new SqlCommand(sql, conex.conexion);
 
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@idcliente", v.IdCliente);
                 cmd.Parameters.AddWithValue("@fecha", v.Fecha);
                 cmd.Parameters.AddWithValue("@total", v.Total);
-
+               // cmd.Parameters.Add("@@identity", SqlDbType.Int).Direction = ParameterDirection.Output;
                 cmd.CommandType = System.Data.CommandType.Text;
                 cmd.CommandText = sql;
                 conex.Conectar();
                 cmd.ExecuteNonQuery();
-                resultado = true;
 
 
+                SqlCommand id = new SqlCommand("select @@identity from ventas", conex.conexion);
+                
+                MaxId = Convert.ToInt32(id.ExecuteScalar());
+               
+                //resto codigo
 
             }
             catch (Exception ex)
@@ -49,7 +53,7 @@ namespace CapaNegocio.GestorCaja
             {
                 conex.Desconectar();
             }
-            return resultado;
+            return MaxId;
          
         }
         public bool InsertarDetalle(DetalleVentas dv)
@@ -59,7 +63,7 @@ namespace CapaNegocio.GestorCaja
 
             try
             {
-                string sql = " insert into ventasItems values (@idVenta, idProducto, precioUnitario,cantidad,precioTotal)";
+                string sql = " insert into ventasItems values (@idVenta, @idProducto, @precioUnitario,@cantidad,@precioTotal)";
                 SqlCommand cmd = new SqlCommand(sql, conex.conexion);
 
                 cmd.Parameters.Clear();
